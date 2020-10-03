@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AmenitiesMap';
+
+  isModalActive: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  toggleModal() {
+    this.isModalActive = !this.isModalActive;
+  }
+
 }

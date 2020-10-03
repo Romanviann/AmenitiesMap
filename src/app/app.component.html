@@ -15,9 +15,40 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item" href="#">
-       Privacy Policy
+      <a class="navbar-item" (click)="toggleModal()">
+        Privacy Policy
       </a>
+
+      <div class="modal" [ngClass]="{ 'is-active' : isModalActive }">
+        <div class="modal-background" (click)="toggleModal()"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+          <p class="title"> Privacy Policy</p>
+          </header>
+          <section class="modal-card-body">
+            <p class="subtitle has-text-weight-bold">You Data</p>
+            <p>Amenities Map does not store any of your data on its servers, nor does it share anything with any third party.</p>
+            <p>Users are free to use the app whenever they want, no signing up and no logging in. Accounts are limited to our connection of franchises and store owners
+            so they can manage their information. Also, none of those mentioned get their data shared with anyone or any entity.</p>
+            <br>
+            <p class="subtitle has-text-weight-bold">
+              Location Services
+            </p>
+            <p>We use Radar.io which is configured to make use of the user's IP address to find close amenities, which in turn does not point to users' precise
+              locations. You can read about Radar.io's privacy policy here. </p><p><a href="https://radar.io/privacy">Radar.io Privacy Policy</a></p>
+            <br>
+            <p class="subtitle has-text-weight-bold">
+              Analytics
+            </p>
+            <p>We use Google Analytics to keep count of our visitors as well as general information like their types of devices, which help us debug and better tailor
+            our app to provide a smoother and more seamless experience.</p>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success" (click)="toggleModal()">Sounds Good</button>
+          </footer>
+        </div>
+      </div>
+
     </div>
   </div>
 
