@@ -1,0 +1,230 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="assets/AM-logo-icon.png" class="mr-3">
+      <p class="title is-size-6">Amenities Map</p>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+       data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" (click)="toggleModal()">
+        Privacy Policy
+      </a>
+
+      <div class="modal" [ngClass]="{ 'is-active' : isModalActive }">
+        <div class="modal-background" (click)="toggleModal()"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="title"> Privacy Policy</p>
+          </header>
+          <section class="modal-card-body">
+            <p class="subtitle has-text-weight-bold">You Data</p>
+            <p>Amenities Map does not store any of your data on its servers, nor does it share anything with any third
+              party.</p>
+            <p>Users are free to use the app whenever they want, no signing up and no logging in. Accounts are limited
+              to our connection of franchises and store owners
+              so they can manage their information. Also, none of those mentioned get their data shared with anyone or
+              any entity.</p>
+            <br>
+            <p class="subtitle has-text-weight-bold">
+              Location Services
+            </p>
+            <p>We use Radar.io which is configured to make use of the user's IP address to find close amenities, which
+              in turn does not point to users' precise
+              locations. You can read about Radar.io's privacy policy here. </p>
+            <p><a href="https://radar.io/privacy">Radar.io Privacy Policy</a></p>
+            <br>
+            <p class="subtitle has-text-weight-bold">
+              Analytics
+            </p>
+            <p>We use Google Analytics to keep count of our visitors as well as general information like their types of
+              devices, which help us debug and better tailor
+              our app to provide a smoother and more seamless experience.</p>
+          </section>
+          <footer class="modal-card-foot">
+
+            <button (click)="toggleModal()" class="button is-success">Sounds Good</button>
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-info">
+          <strong>Sign up</strong>
+        </a>
+        <a class="button is-light">
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="hero is-medium has-background-white">
+  <div class="hero-body is-size-4-widescreen">
+    <div class="columns">
+      <div class="column is-three-fifths is-align-self-center">
+        <p class="title">
+          Amenities Map is your guide to all your local amenities!
+        </p>
+        <div class="subtitle">
+          <span>Get trusty information about your destination, </span> <span class="has-text-weight-bold">before </span><span>heading out.</span>
+        </div>
+
+        <button  (click)="goToStart()"  class="button is-medium is-info is-block">Let's Do This</button>
+      </div>
+      <div class="column">
+
+        <div class="card" style="width: max-content">
+          <div class="card-content p-3">
+            <div class="content">
+              <div class="block is-flex">
+                <img src="assets/sb.png" width="45px" class="is-rounded">
+                <p class="title is-inline">Starbucks <span class="tag is-success">Open Till 8:00 PM</span></p>
+              </div>
+              <div class="block">
+                <p class="is-marginless">705 St-Catherine Street West</p>
+                <p class="is-marginless">1115C</p>
+                <p class="is-marginless">Montreal, QC H3B 4G5</p>
+              </div>
+              <div class="block">
+                <p class="subtitle is-marginless mb-1">Safety Regulations</p>
+                <span class="tag is-danger is-light is-normal is-rounded mr-1">Mask Required</span> <span class="tag is-danger is-light is-normal is-rounded mr-1">Takeaway Only</span>
+                <span class="tag is-danger is-light is-normal is-rounded mr-1">Temperature Checks</span>
+              </div>
+
+
+              <br>
+              <span class="is-block is-size-7">Last Updated at </span>
+              <time class="is-size-7" datetime="2020-10-1">11:09 PM - 10 Oct 2020</time>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--################# END OF TOP SECTION ###################-->
+
+<section class="section has-background-info">
+  <p class="title has-text-light">What's Amenities Map?</p>
+  <div class="columns has-text-centered">
+
+    <div class="column has-text-light is-half has-text-justified is-size-4-widescreen">
+      <p>Amenities Map has been developed to solve a problem in my home country, Lebanon, but it is also at the same
+        time a
+        viable solution anywhere around the world.</p>
+      <br>
+      <p>Ever since COVID-19 hit, opening and closing hours of most amenities including car repair shops, clinics,
+        restaurants, public parks...etc have been very inconsistent. Add to that, each one of those may have different
+        rules and regulations that you are forced to abide by before entry.</p>
+      <br>
+      <p>Amenities Map makes your life easier by have direct communication with different franchises, shops, clinics,
+        venues,
+        and potentially municipalities, to provide accurate opening and closing times, required precaution wearables,
+        and
+        other valuable information. Everything right here at your fingertips, before you leave your home.</p>
+    </div>
+
+    <div class="column">
+      <img src="assets/about-art.png">
+    </div>
+
+  </div>
+</section>
+
+<section class="section has-background-white is-medium is-size-4-widescreen">
+  <p class="title">Features</p>
+  <br>
+  <div class="columns has-text-centered">
+
+    <div class="column">
+      <img src="assets/map-f.png" width="150px" class="mb-4">
+      <p class="title is-6">App searches for reachable amenities around you</p>
+    </div>
+
+    <div class="column">
+      <img src="assets/opening-f.png" width="150px" class="mb-4">
+      <p class="title is-6">Get precise up-to-date opening and closing hours</p>
+    </div>
+
+    <div class="column">
+      <img src="assets/rules-f.png" width="150px" class="mb-4">
+      <p class="title is-6">Know about what each place's safety rules beforehand</p>
+    </div>
+
+    <div class="column">
+      <img src="assets/navigate-f.png" width="150px" class="mb-4">
+      <p class="title is-6">Ready to go? One-tap navigation to destination</p>
+    </div>
+  </div>
+
+  <div class="column is-full has-text-centered mt-6">
+  </div>
+
+  <div class="column is-full has-text-centered mt-6">
+    <p class="title is-4">and this is only the beginning!</p>
+  </div>
+</section>
+
+
+<section class="section has-background-dark pb-1">
+  <div class="columns is-vcentered">
+
+    <div class="column is-half">
+      <img src="assets/AM-logo-banner-light.png" width="400px">
+    </div>
+
+
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            “This tool is for YOU. YOU decide what it should and shouldn't have.”
+          </p>
+          <p class="subtitle">
+            Omar Jawhar - Author
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+          <span>
+            Suggest a Feature <a
+            href="https://twitter.com/intent/tweet?text=@romanviann%20I%20request&hashtags=AmenitiesMap">Twitter</a>
+          </span>
+          </p>
+          <p class="card-footer-item">
+          <span>
+            Contact Me <a href="#">Email</a>
+          </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="column has-text-centered is-size-6 has-text-light mt-4">
+    <p class="is-inline">Developed with </p>
+    <p class="is-inline has-text-danger">love</p>
+    <p class="is-inline">, for the world,</p>
+    <p class="is-inline"> from Beirut</p>
+
+
+  </div>
+
+</section>
