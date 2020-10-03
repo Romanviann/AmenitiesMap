@@ -9,20 +9,5 @@ import {Router} from '@angular/router';
 export class AppComponent {
   title = 'AmenitiesMap';
 
-  isModalActive: boolean = false;
-
-  constructor(public router: Router) {
-  }
-
-  ngOnInit() {
-  }
-
-  toggleModal() {
-    this.isModalActive = !this.isModalActive;
-  }
-
-  navigateToMain() {
-    this.router.navigate(['/main']);
-  }
 
 }
